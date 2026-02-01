@@ -8,6 +8,10 @@
 
 本仓库包含 ICLR 2026 所有录用论文的数据，以及分析脚本和可视化结果。
 
+> **在线浏览**: [https://kmno4-zx.github.io/iclr26-all-papers/](https://kmno4-zx.github.io/iclr26-all-papers/)
+>
+> **下载**: 完整论文合集可在 [Releases](../../releases) 中下载
+
 ![概览分析](images/iclr26_analysis.png)
 
 ---

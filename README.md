@@ -8,6 +8,10 @@
 
 This repository contains all accepted papers from ICLR 2026, along with analysis scripts and visualizations.
 
+> **Online Demo**: [https://kmno4-zx.github.io/iclr26-all-papers/](https://kmno4-zx.github.io/iclr26-all-papers/)
+>
+> **Download**: Full paper collection available in [Releases](../../releases)
+
 ![Overview Analysis](images/iclr26_analysis.png)
 
 ---
