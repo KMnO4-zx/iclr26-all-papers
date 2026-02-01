@@ -1,6 +1,10 @@
-# ICLR 2026 All Accepted Papers
+# ICLR 2026 Accepted Papers Simple Analysis
+
+<div align="center">
 
 [中文版](README_CN.md) | English
+
+</div>
 
 This repository contains all accepted papers from ICLR 2026, along with analysis scripts and visualizations.
 

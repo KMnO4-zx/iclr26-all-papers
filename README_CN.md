@@ -1,6 +1,10 @@
 # ICLR 2026 录用论文合集
 
+<div align="center">
+
 [English](README.md) | 中文版
+
+</div>
 
 本仓库包含 ICLR 2026 所有录用论文的数据，以及分析脚本和可视化结果。
 
