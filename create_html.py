@@ -336,6 +336,7 @@ def create_papers_html():
         reply_count = paper.get('replyCount', 0)
         openreview_url = paper.get('openreview_url', '')
         pdf_url = paper.get('pdf_url', '')
+        paper_id = paper.get('id', '')
 
         html_content += f'''
             <div class="paper-card">
@@ -347,6 +348,7 @@ def create_papers_html():
                 <div class="paper-abstract">{abstract}</div>
                 <a href="{openreview_url}" class="paper-link" target="_blank">📄 OpenReview</a>
                 <a href="{pdf_url}" class="paper-link" target="_blank">📄 PDF</a>
+                <a href="https://paper-online.onrender.com/?id={paper_id}" class="paper-link" target="_blank">🤖 LLM-Analysis</a>
             </div>
         '''
 
