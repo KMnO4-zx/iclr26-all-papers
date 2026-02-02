@@ -179,8 +179,8 @@ def create_papers_html():
         }}
 
         .analysis-image {{
-            width: 80%;
-            max-width: 80%;
+            width: 100%;
+            max-width: 100%;
             display: block;
             margin: 0 auto 20px auto;
             border-radius: 8px;
@@ -317,20 +317,28 @@ def create_papers_html():
             <img src="images/iclr26_analysis.png" alt="ICLR 2026 Analysis" class="analysis-image">
             <div class="analysis-desc">
                 <div class="analysis-item">
-                    <h4>Keywords Word Cloud（左上）</h4>
-                    <p>关键词词云图，展示论文关键词的词频分布，词越大表示出现频率越高</p>
-                </div>
-                <div class="analysis-item">
-                    <h4>Primary Area Distribution（右上）</h4>
+                    <h4>Primary Area Distribution（左上）</h4>
                     <p>各研究领域的论文数量分布，展示不同研究方向的热度</p>
                 </div>
                 <div class="analysis-item">
-                    <h4>Reply Count Distribution（左下）</h4>
+                    <h4>Keywords Word Cloud（右上）</h4>
+                    <p>关键词词云图，展示论文关键词的词频分布，词越大表示出现频率越高</p>
+                </div>
+                <div class="analysis-item">
+                    <h4>Reply Count Distribution（左中）</h4>
                     <p>论文回复数分布直方图，红线为均值，绿线为中位数</p>
                 </div>
                 <div class="analysis-item">
-                    <h4>Submission Order vs Acceptance（右下）</h4>
+                    <h4>Submission Order vs Acceptance（右中）</h4>
                     <p>投稿顺序与接收论文的关系，number 越小表示投稿越早</p>
+                </div>
+                <div class="analysis-item">
+                    <h4>Acceptance Rate by Primary Area（左下）</h4>
+                    <p>各研究领域的中稿率，红绿渐变色表示中稿率高低</p>
+                </div>
+                <div class="analysis-item">
+                    <h4>Acceptance Rate by Rating Range（右下）</h4>
+                    <p>不同评分区间的中稿率，展示评分与录用的关系</p>
                 </div>
             </div>
         </div>
