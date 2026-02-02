@@ -12,6 +12,11 @@ def create_papers_html():
 
     # 读取论文数据
     df = pd.read_csv('iclr26_all_papers.csv')
+
+    # 按 avg_rating 降序排序（评分高的在前面）
+    df['avg_rating'] = pd.to_numeric(df['avg_rating'], errors='coerce')
+    df = df.sort_values(by='avg_rating', ascending=False, na_position='last')
+
     papers_data = df.to_dict('records')
 
     # 创建HTML内容
@@ -148,6 +153,17 @@ def create_papers_html():
             border-radius: 4px;
             font-size: 0.8rem;
             margin-left: 10px;
+        }}
+
+        .avg-rating {{
+            display: inline-block;
+            padding: 4px 10px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            font-weight: bold;
         }}
 
         .analysis-section {{
@@ -337,11 +353,19 @@ def create_papers_html():
         openreview_url = paper.get('openreview_url', '')
         pdf_url = paper.get('pdf_url', '')
         paper_id = paper.get('id', '')
+        avg_rating = paper.get('avg_rating', '')
+
+        # 格式化平均评分显示
+        if pd.notna(avg_rating) and avg_rating != '':
+            rating_html = f'<span class="avg-rating">⭐ {avg_rating:.2f}</span>'
+        else:
+            rating_html = ''
 
         html_content += f'''
             <div class="paper-card">
                 <div class="paper-title">{i+1}. {title}
                     <span class="reply-count">💬 {reply_count}</span>
+                    {rating_html}
                 </div>
                 <div class="paper-area">📁 {primary_area}</div>
                 <div class="paper-keywords">🏷️ {keywords}</div>
